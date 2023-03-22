@@ -1,0 +1,18 @@
+{
+  "name": "variety-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "father": "^4.1.7",
+    "vite": "^4.2.1"
+  }
+}

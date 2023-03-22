@@ -1,0 +1,22 @@
+{
+  "name": "@view-design/variety",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "father build"
+  },
+  "keywords": [],
+  "author": "",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "typescript": "^5.0.2"
+  }
+}
