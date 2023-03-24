@@ -32,10 +32,16 @@
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.6",
     "rimraf": "^4.4.1",
+    "stylelint": "^15.3.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^11.0.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-order": "^6.0.3",
     "vite": "^4.2.1"
   },
   "lint-staged": {
-    "packages/**/*.{vue, js,jsx,ts,tsx,json}": [
+    "src/**/*.{vue,js,jsx,ts,tsx,json}": [
       "pnpm run codeformat",
       "git add"
     ]
