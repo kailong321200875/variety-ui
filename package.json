@@ -35,7 +35,7 @@
     "vite": "^4.2.1"
   },
   "lint-staged": {
-    "src/**/*.{vue, js,jsx,ts,tsx,json}": [
+    "packages/**/*.{vue, js,jsx,ts,tsx,json}": [
       "pnpm run codeformat",
       "git add"
     ]
