@@ -1,7 +1,7 @@
-import { Config } from '@stencil/core';
-import { sass } from '@stencil/sass';
-import { postcss } from '@stencil-community/postcss';
-import autoprefixer from 'autoprefixer';
+import { Config } from '@stencil/core'
+import { sass } from '@stencil/sass'
+import { postcss } from '@stencil-community/postcss'
+import autoprefixer from 'autoprefixer'
 
 export const config: Config = {
   namespace: 'core',
@@ -13,27 +13,27 @@ export const config: Config = {
       // ]
     }),
     postcss({
-      plugins: [autoprefixer()],
-    }),
+      plugins: [autoprefixer()]
+    })
   ],
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader',
+      esmLoaderPath: '../loader'
     },
     {
-      type: 'dist-custom-elements',
+      type: 'dist-custom-elements'
     },
     {
-      type: 'docs-readme',
+      type: 'docs-readme'
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: null // disable service workers
     },
     {
       type: 'docs-vscode',
-      file: 'vscode-data.json',
-    },
-  ],
-};
+      file: 'vscode-data.json'
+    }
+  ]
+}

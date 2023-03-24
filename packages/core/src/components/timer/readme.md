@@ -1,9 +1,6 @@
 # view-timer
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -11,7 +8,6 @@
 | ---------- | ---------- | ----------- | -------- | ------- |
 | `duration` | `duration` |             | `number` | `60`    |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
