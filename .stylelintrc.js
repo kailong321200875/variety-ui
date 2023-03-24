@@ -2,61 +2,39 @@ module.exports = {
   root: true,
   plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-standard'],
   rules: {
-    'selector-pseudo-class-no-unknown': [
+    // 禁止空块
+    'block-no-empty': true,
+    // 颜色6位长度
+    'color-hex-length': 'long',
+    // 兼容自定义标签名
+    'selector-type-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['global', 'deep']
+        ignoreTypes: []
       }
     ],
-    'at-rule-no-unknown': [
+    // 忽略伪类选择器 ::v-deep
+    'selector-pseudo-element-no-unknown': [
       true,
       {
-        ignoreAtRules: ['function', 'if', 'each', 'include', 'mixin']
+        ignorePseudoElements: ['v-deep']
       }
     ],
-    'no-empty-source': null,
-    'named-grid-areas-no-invalid': null,
-    'unicode-bom': 'never',
+    // 禁止低优先级的选择器出现在高优先级的选择器之后。
     'no-descending-specificity': null,
-    'font-family-no-missing-generic-family-keyword': null,
-    'declaration-colon-space-after': 'always-single-line',
-    'declaration-colon-space-before': 'never',
-    'declaration-block-trailing-semicolon': null,
-    'rule-empty-line-before': [
-      'always',
-      {
-        ignore: ['after-comment', 'first-nested']
-      }
-    ],
-    'unit-no-unknown': [
-      true,
-      {
-        ignoreUnits: ['rpx']
-      }
-    ],
-    'order/order': [
-      [
-        'dollar-variables',
-        'custom-properties',
-        'at-rules',
-        'declarations',
-        {
-          type: 'at-rule',
-          name: 'supports'
-        },
-        {
-          type: 'at-rule',
-          name: 'media'
-        },
-        'rules'
-      ],
-      {
-        severity: 'warning'
-      }
-    ],
-    // Specify the alphabetical order of the attributes in the declaration block
+    // 不验证@未知的名字，为了兼容scss的函数
+    'at-rule-no-unknown': null,
+    // 禁止空注释
+    'comment-no-empty': true,
+    // 禁止简写属性的冗余值
+    'shorthand-property-no-redundant-values': true,
+    // 禁止值的浏览器引擎前缀
+    'value-no-vendor-prefix': true,
+    // property-no-vendor-prefix
+    'property-no-vendor-prefix': true,
+    // 属性的排序
     'order/properties-order': [
       'position',
       'top',
