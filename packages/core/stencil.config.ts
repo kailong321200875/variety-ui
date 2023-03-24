@@ -2,9 +2,10 @@ import { Config } from '@stencil/core'
 import { sass } from '@stencil/sass'
 import { postcss } from '@stencil-community/postcss'
 import autoprefixer from 'autoprefixer'
+import { vueOutputTarget } from '@stencil/vue-output-target'
 
 export const config: Config = {
-  namespace: 'core',
+  namespace: 'variety',
   plugins: [
     sass({
       // injectGlobalPaths: [
@@ -34,6 +35,10 @@ export const config: Config = {
     {
       type: 'docs-vscode',
       file: 'vscode-data.json'
-    }
+    },
+    vueOutputTarget({
+      componentCorePackage: '@view-design/variety',
+      proxiesFile: '../variety-vue/lib/components.ts'
+    })
   ]
 }

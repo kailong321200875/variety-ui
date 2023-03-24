@@ -1,11 +1,11 @@
-import { Component, Prop, h, State } from '@stencil/core'
+import { Component, Prop, State } from '@stencil/core'
 
 @Component({
   tag: 'view-timer',
   styleUrl: 'timer.scss',
   shadow: true
 })
-export class Timer {
+export class ViewTimer {
   @Prop() duration: number = 60
 
   @State() private end: number | null = null
